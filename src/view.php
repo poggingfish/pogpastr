@@ -19,7 +19,11 @@
             die();
         }
         if ($_GET['raw'] == "true"){
-            echo $paste;
+            echo nl2br($paste);
+            die();
+        }
+        if ($_GET['html_render'] == "true"){
+            echo htmlspecialchars_decode($paste);
             die();
         }
     }

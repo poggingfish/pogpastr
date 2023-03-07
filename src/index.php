@@ -9,10 +9,10 @@
         }
         return $randomString;
     }
-    $paste = $_GET['paste'];
+    $paste = $_POST['paste'];
     if($paste){
         if($paste != ""){
-            if (strlen($paste) <= 15000){
+            if (strlen($paste) <= 70000){
                 $id = generateRandomString(25);
                 $db = new PDO("sqlite:$dbFile");
                 $paste = htmlspecialchars($paste);
@@ -30,9 +30,9 @@
     }
     echo str_replace("\$_license_replace",$license_paste_id,file_get_contents("header.html"))
 ?>
-    <form>
+    <form method="post">
         <div style="background-color: #443C68; width: 75%; height: 75%; text-align: center;" class=content>
-            <textarea maxlength=5000 name=paste style="min-height: 50%; background-color: #635985; max-height: 50%; font-size: 18px; color:#E384FF;max-width: 75%; min-width: 75%;resize: none;margin-top: 10%;"></textarea>
+            <textarea maxlength=50000 name=paste style="min-height: 50%; background-color: #635985; max-height: 50%; font-size: 18px; color:#E384FF;max-width: 75%; min-width: 75%;resize: none;margin-top: 10%;"></textarea>
             <br><br><button style="width:75px; height:45px; border-radius: 15%;">Paste!</button>
         </div>
     </form>
