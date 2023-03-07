@@ -28,7 +28,7 @@
             }
         }
     }
-    echo file_get_contents("header.html")
+    echo str_replace("\$_license_replace",$license_paste_id,file_get_contents("header.html"))
 ?>
     <form>
         <div style="background-color: #443C68; width: 75%; height: 75%; text-align: center;" class=content>
