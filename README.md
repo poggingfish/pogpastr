@@ -1,3 +1,3 @@
-# Pastr - A free pastebin alternitive with no ads.
+# Pogpastr - A free pastebin alternitive with no ads.
 
 ## https://paste.pogging.fish/
