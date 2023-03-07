@@ -27,7 +27,7 @@
         echo "Invalid request.";
         die();
     }
-    echo file_get_contents("header.html")
+    echo str_replace("\$_license_replace",$license_paste_id,file_get_contents("header.html"))
 ?>
     <form>
         <div style="background-color: #FFFFFF; width: 75%; height: 75%;" class=content><textarea readonly style="font-size: 18px;height: 100%; width: 100%; resize: none;"><?php echo "$paste" ?></textarea>
